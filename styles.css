@@ -194,14 +194,28 @@ a {
   text-align: center;
 }
 
+@keyframes pulse-urgent {
+  0%, 100% {
+    color: var(--orange);
+    text-shadow: 0 0 10px rgba(221, 107, 32, 0.2);
+  }
+  50% {
+    color: #ef4444;
+    text-shadow: 0 0 20px rgba(239, 68, 68, 0.7);
+  }
+}
+
 .countdown-value {
-  font-size: clamp(2rem, 3vw, 2.35rem);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: clamp(2.2rem, 4vw, 2.7rem);
   font-weight: 800;
   color: var(--white);
+  line-height: 1;
 }
 
 .countdown-value--accent {
   color: var(--orange);
+  animation: pulse-urgent 1.5s infinite alternate;
 }
 
 .countdown-label {
@@ -957,4 +971,28 @@ a {
   .site-footer {
     padding-bottom: 7rem;
   }
+}
+
+body.offer-expired .pre-deadline-element {
+  display: none !important;
+}
+
+body.offer-expired .post-deadline-element {
+  display: block;
+}
+
+body.offer-expired span.post-deadline-element {
+  display: inline-flex;
+}
+
+.post-deadline-element {
+  display: none;
+}
+
+.launch-banner h2 {
+  color: var(--orange);
+  font-size: 2.5rem;
+  margin: 0;
+  text-shadow: 0 0 15px rgba(221, 107, 32, 0.5);
+  animation: pulse-urgent 2s infinite alternate;
 }

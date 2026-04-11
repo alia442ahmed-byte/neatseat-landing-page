@@ -1,6 +1,4 @@
-const countdownState = {
-  totalSeconds: (((10 * 24) + 14) * 60 + 32) * 60 + 15,
-};
+const deadline = new Date("2026-04-17T23:59:59-06:00").getTime();
 
 const parts = {
   days: document.querySelector("[data-days]"),
@@ -14,7 +12,7 @@ function formatCountdown(totalSeconds) {
   const days = Math.floor(safeSeconds / 86400);
   const hours = Math.floor((safeSeconds % 86400) / 3600);
   const minutes = Math.floor((safeSeconds % 3600) / 60);
-  const seconds = safeSeconds % 60;
+  const seconds = Math.floor(safeSeconds % 60);
 
   return {
     days: String(days),
@@ -29,7 +27,15 @@ function renderCountdown() {
     return;
   }
 
-  const values = formatCountdown(countdownState.totalSeconds);
+  const now = new Date().getTime();
+  const remainingMillis = deadline - now;
+  const totalSeconds = remainingMillis > 0 ? remainingMillis / 1000 : 0;
+
+  if (totalSeconds <= 0) {
+    document.body.classList.add("offer-expired");
+  }
+
+  const values = formatCountdown(totalSeconds);
   parts.days.textContent = values.days;
   parts.hours.textContent = values.hours;
   parts.minutes.textContent = values.minutes;
@@ -39,6 +45,5 @@ function renderCountdown() {
 renderCountdown();
 
 window.setInterval(() => {
-  countdownState.totalSeconds = Math.max(countdownState.totalSeconds - 1, 0);
   renderCountdown();
 }, 1000);
