@@ -64,3 +64,19 @@ swatches.forEach((swatch) => {
     if (colourLabel) colourLabel.textContent = colourNames[idx];
   });
 });
+
+// Form submission — save to Google Sheets then return to landing page
+const contactForm = document.getElementById("contactForm");
+const submitBtn = document.getElementById("formSubmitBtn");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", () => {
+    if (submitBtn) {
+      submitBtn.textContent = "Sending...";
+      submitBtn.disabled = true;
+    }
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 1200);
+  });
+}

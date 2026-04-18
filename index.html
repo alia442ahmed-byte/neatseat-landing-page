@@ -434,7 +434,8 @@
             <h2 class="section-title">Questions or Special Requests?</h2>
             <p>Fill in your details and we'll get back to you shortly.</p>
           </header>
-          <form class="contact-form" action="https://script.google.com/macros/s/AKfycbwQLo3TzvW247yU4cNOtik8toiaFVT5pEdL2fIpVUCqcsq1QSyfZdPYCd3bFwZLhvqlMQ/exec" method="POST">
+          <iframe name="form-target" style="display:none;" aria-hidden="true"></iframe>
+          <form class="contact-form" action="https://script.google.com/macros/s/AKfycbwQLo3TzvW247yU4cNOtik8toiaFVT5pEdL2fIpVUCqcsq1QSyfZdPYCd3bFwZLhvqlMQ/exec" method="POST" target="form-target" id="contactForm">
             <input type="hidden" name="_next" value="thankyou.html" />
             <div class="form-row">
               <div class="form-group">
@@ -475,7 +476,7 @@
               <label for="contact-message">Additional Information</label>
               <textarea id="contact-message" name="message" rows="4" placeholder="Any questions or special requests..."></textarea>
             </div>
-            <button type="submit" class="form-submit">Send Message</button>
+            <button type="submit" class="form-submit" id="formSubmitBtn">Send Message</button>
           </form>
         </div>
       </section>
