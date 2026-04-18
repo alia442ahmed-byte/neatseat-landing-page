@@ -12,6 +12,10 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <div class="mothers-day-banner">
+      🌸 <strong>Mother's Day Special — 20% Off!</strong> Celebrate Mom with the gift of a stress-free, organised car.
+    </div>
+
     <svg class="icon-sprite" aria-hidden="true" focusable="false">
       <symbol id="icon-alert-circle" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="10"></circle>
@@ -78,8 +82,7 @@
           </h1>
           <p class="hero-copy">
             Neat Seat is the car organizer that gives everything a home — the tablet, the snacks, the water bottle, the trash — so you can stop cleaning and start enjoying the ride.
-            <strong>Limited to Just 30 Units, only 26 remaining</strong>. Pre-order ends
-            <strong>April 17th</strong>, with launch on April 18.
+            <strong>Limited to Just 30 Units, only 26 remaining.</strong> Basic from <strong>$39.99</strong> · Premium from <strong>$47.99</strong>. 🌸 Mother's Day Special — 20% Off!
           </p>
 
           <div class="countdown-block">
@@ -120,7 +123,7 @@
               class="cta-button"
               href="https://checkout.square.site/merchant/MLQ5J8FGGNN99/checkout/ZEUVEVIJKFXDFAOBQ32K47Y3?src=sheet"
             >
-              <span class="cta-button__title">Get My Neat Seat — $29.99</span>
+              <span class="cta-button__title">Order Neat Seat — From $39.99</span>
               <span class="cta-button__subtitle">Only 26 Units Left!</span>
             </a>
           </div>
@@ -296,36 +299,93 @@
       <section class="offer-section">
         <div class="container offer-shell">
           <header class="offer-header">
-            <h2 class="section-title">
-              Here's Everything You're Getting When You Pre-Order Your Neat Seat:
-            </h2>
-            <p>
-              A complete system that keeps your car clean — at a fraction of the retail price.
-            </p>
+            <h2 class="section-title">Choose Your Neat Seat</h2>
+            <p>Pick the tier that's right for you — all orders include 3 digital bonuses.</p>
+            <div class="social-proof-badge">
+              🔥 <strong>7 units sold</strong> — 3 in the last 24 hours
+            </div>
           </header>
 
-          <div class="offer-product">
-            <img
-              src="images/NeatSeat%20product.png"
-              alt="Neat Seat product"
-              loading="lazy"
-            />
+          <div class="pricing-tiers">
+
+            <!-- BASIC -->
+            <div class="tier-card">
+              <div class="tier-header">
+                <span class="tier-label">Standard</span>
+                <h3>Neat Seat Basic</h3>
+                <p class="tier-color-info">Navy Blue · 1 colour option</p>
+              </div>
+              <div class="tier-image">
+                <img src="images/NeatSeat%20product.png" alt="Neat Seat Standard — Navy Blue" loading="lazy" />
+              </div>
+              <div class="tier-pricing">
+                <span class="tier-was">Retail: $49.99</span>
+                <span class="tier-price pre-deadline-element">$39.99</span>
+                <span class="tier-price post-deadline-element" style="display:none;">$49.99</span>
+              </div>
+              <ul class="tier-features">
+                <li><span class="feat-check">✓</span> Phone, tablet, water, snacks &amp; trash compartments</li>
+                <li><span class="feat-check">✓</span> 2-minute setup — no tools needed</li>
+                <li><span class="feat-check">✓</span> 3 digital bonuses included</li>
+                <li><span class="feat-check">✓</span> 60-Day money-back guarantee</li>
+                <li class="feat-neutral"><span class="feat-x">✗</span> Colour: Navy Blue only</li>
+              </ul>
+              <a class="cta-button tier-cta pre-deadline-element" href="https://checkout.square.site/merchant/MLQ5J8FGGNN99/checkout/ZEUVEVIJKFXDFAOBQ32K47Y3?src=sheet">
+                <span class="cta-button__title">Order Basic — $39.99</span>
+                <span class="cta-button__subtitle">Navy Blue · Was $49.99</span>
+              </a>
+              <a class="cta-button tier-cta post-deadline-element" style="display:none;" href="https://checkout.square.site/merchant/MLQ5J8FGGNN99/checkout/ZEUVEVIJKFXDFAOBQ32K47Y3?src=sheet">
+                <span class="cta-button__title">Order Basic — $49.99</span>
+                <span class="cta-button__subtitle">Navy Blue</span>
+              </a>
+            </div>
+
+            <!-- PREMIUM -->
+            <div class="tier-card tier-card--premium">
+              <div class="tier-best-badge">Most Popular</div>
+              <div class="tier-header">
+                <span class="tier-label tier-label--gold">Premium</span>
+                <h3>Neat Seat Premium</h3>
+                <p class="tier-color-info">3 colours · Higher quality material</p>
+              </div>
+              <div class="tier-gallery">
+                <img src="images/premium-navy.jpg" class="tier-gallery-img active" alt="Navy Blue" loading="lazy" />
+                <img src="images/premium-red.jpg" class="tier-gallery-img" alt="Red Wine" loading="lazy" />
+                <img src="images/premium-grey.jpg" class="tier-gallery-img" alt="Bullet Grey" loading="lazy" />
+              </div>
+              <div class="colour-swatches">
+                <button class="swatch swatch--navy active" data-idx="0" title="Navy Blue"></button>
+                <button class="swatch swatch--red" data-idx="1" title="Red Wine"></button>
+                <button class="swatch swatch--grey" data-idx="2" title="Bullet Grey"></button>
+              </div>
+              <p class="selected-colour-label" id="selectedColour">Navy Blue</p>
+              <div class="tier-pricing">
+                <span class="tier-was">Retail: $59.99</span>
+                <span class="tier-price pre-deadline-element">$47.99</span>
+                <span class="tier-price post-deadline-element" style="display:none;">$59.99</span>
+              </div>
+              <ul class="tier-features">
+                <li><span class="feat-check">✓</span> Phone, tablet, water, snacks &amp; trash compartments</li>
+                <li><span class="feat-check">✓</span> 2-minute setup — no tools needed</li>
+                <li><span class="feat-check">✓</span> 3 digital bonuses included</li>
+                <li><span class="feat-check">✓</span> 60-Day money-back guarantee</li>
+                <li class="feat-premium"><span class="feat-check">✓</span> Premium leather material</li>
+                <li class="feat-premium"><span class="feat-check">✓</span> 3 colours: Navy Blue, Red Wine, Bullet Grey</li>
+              </ul>
+              <a class="cta-button tier-cta pre-deadline-element" href="https://checkout.square.site/merchant/MLQ5J8FGGNN99/checkout/DNGHL3V7ZBIFS3LY6P2SNVME?src=sheet">
+                <span class="cta-button__title">Order Premium — $47.99</span>
+                <span class="cta-button__subtitle">Choose your colour · Was $59.99</span>
+              </a>
+              <a class="cta-button tier-cta post-deadline-element" style="display:none;" href="https://checkout.square.site/merchant/MLQ5J8FGGNN99/checkout/DNGHL3V7ZBIFS3LY6P2SNVME?src=sheet">
+                <span class="cta-button__title">Order Premium — $59.99</span>
+                <span class="cta-button__subtitle">Choose your colour</span>
+              </a>
+            </div>
           </div>
 
-          <div class="offer-card">
+          <!-- Bonuses (included with every order) -->
+          <div class="offer-card" style="margin-top: 3rem;">
             <div class="offer-list">
-              <article class="offer-item">
-                <div class="offer-item__main">
-                  <div class="icon-chip">
-                    <svg class="icon"><use href="#icon-package"></use></svg>
-                  </div>
-                  <div class="offer-item__text">
-                    <h3>Neat Seat Premium Car Organizer</h3>
-                  </div>
-                </div>
-                <p class="offer-item__value">Retail Value: $49.99</p>
-              </article>
-
               <article class="offer-item">
                 <div class="offer-item__main">
                   <div class="icon-chip">
@@ -338,7 +398,6 @@
                 </div>
                 <p class="offer-item__value">Value: $19.00</p>
               </article>
-
               <article class="offer-item">
                 <div class="offer-item__main">
                   <div class="icon-chip">
@@ -351,7 +410,6 @@
                 </div>
                 <p class="offer-item__value">Value: $27.00</p>
               </article>
-
               <article class="offer-item offer-item--last">
                 <div class="offer-item__main">
                   <div class="icon-chip">
@@ -365,33 +423,11 @@
                 <p class="offer-item__value">Value: $47.00</p>
               </article>
             </div>
-
             <div class="pricing-card">
               <p class="pricing-card__value pre-deadline-element">
-                Total Value:
-                <span class="pricing-card__strike">$142.99</span>
+                All 3 bonuses included — Total bonus value: <span class="pricing-card__strike">$93.00</span>
               </p>
-              <p class="pricing-card__price pre-deadline-element">
-                Your Pre-Order Price Today:
-                <span>$29.99</span>
-              </p>
-
-              <p class="pricing-card__price post-deadline-element" style="display: none;">
-                Pre-Order Offer Ended April 17. Retail Price:
-                <span>$49.99</span>
-              </p>
-
-              <a
-                class="cta-button"
-                href="https://checkout.square.site/merchant/MLQ5J8FGGNN99/checkout/ZEUVEVIJKFXDFAOBQ32K47Y3?src=sheet"
-              >
-                <span class="cta-button__title">
-                  Yes! I Want My Neat Seat + All 3 Bonuses!
-                </span>
-                <span class="cta-button__subtitle">(Only 26 Left at This Price)</span>
-              </a>
-
-              <div class="mini-trust">
+              <div class="mini-trust" style="margin-top: 1.5rem;">
                 <span>
                   <svg class="icon icon-sm mini-trust__icon mini-trust__icon--success">
                     <use href="#icon-check-circle"></use>
@@ -413,6 +449,47 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="container">
+          <header class="offer-header">
+            <h2 class="section-title">Questions or Special Requests?</h2>
+            <p>Fill in your details and we'll get back to you shortly.</p>
+          </header>
+          <form class="contact-form" action="https://formspree.io/f/meevgwoy" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Full Name</label>
+                <input type="text" id="contact-name" name="name" placeholder="Jane Smith" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" name="email" placeholder="jane@example.com" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-phone">Phone Number</label>
+                <input type="tel" id="contact-phone" name="phone" placeholder="+1 (555) 000-0000" />
+              </div>
+              <div class="form-group">
+                <label for="contact-colour">Colour Preference</label>
+                <select id="contact-colour" name="colour">
+                  <option value="">Select a colour...</option>
+                  <option value="navy-blue">Navy Blue (Basic &amp; Premium)</option>
+                  <option value="red-wine">Red Wine (Premium only)</option>
+                  <option value="bullet-grey">Bullet Grey (Premium only)</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Additional Information</label>
+              <textarea id="contact-message" name="message" rows="4" placeholder="Any questions or special requests..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Message</button>
+          </form>
         </div>
       </section>
 
@@ -470,13 +547,16 @@
     </footer>
 
     <div class="mobile-cta">
-      <a
-        class="mobile-cta__button"
-        href="https://checkout.square.site/merchant/MLQ5J8FGGNN99/checkout/ZEUVEVIJKFXDFAOBQ32K47Y3?src=sheet"
-      >
-        <span>Get My Neat Seat — $29.99</span>
-        <span class="mobile-cta__badge">Only 26 Left</span>
-      </a>
+      <div class="mobile-cta-pair">
+        <a class="mobile-cta__button mobile-cta__button--basic pre-deadline-element" href="https://checkout.square.site/merchant/MLQ5J8FGGNN99/checkout/ZEUVEVIJKFXDFAOBQ32K47Y3?src=sheet">
+          <span>Basic</span>
+          <span class="mobile-cta__badge">$39.99</span>
+        </a>
+        <a class="mobile-cta__button pre-deadline-element" href="https://checkout.square.site/merchant/MLQ5J8FGGNN99/checkout/DNGHL3V7ZBIFS3LY6P2SNVME?src=sheet">
+          <span>Premium</span>
+          <span class="mobile-cta__badge">$47.99</span>
+        </a>
+      </div>
     </div>
   </body>
 </html>
