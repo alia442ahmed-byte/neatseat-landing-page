@@ -1,4 +1,4 @@
-const deadline = new Date("2026-04-17T23:59:59-06:00").getTime();
+const deadline = new Date("2026-04-18T23:59:59-06:00").getTime();
 
 const parts = {
   days: document.querySelector("[data-days]"),
