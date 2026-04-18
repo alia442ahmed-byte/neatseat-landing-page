@@ -996,3 +996,331 @@ body.offer-expired span.post-deadline-element {
   text-shadow: 0 0 15px rgba(221, 107, 32, 0.5);
   animation: pulse-urgent 2s infinite alternate;
 }
+
+/* ── MOTHER'S DAY BANNER ── */
+.mothers-day-banner {
+  background: linear-gradient(90deg, #b5006e, #d63384, #b5006e);
+  color: #fff;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ── SOCIAL PROOF ── */
+.social-proof-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: 999px;
+  background: #fff8e1;
+  color: #7a5c00;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid #f5d878;
+}
+
+/* ── PRICING TIERS ── */
+.pricing-tiers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  align-items: start;
+}
+
+.tier-card {
+  border-radius: 1.5rem;
+  border: 2px solid rgba(148, 163, 184, 0.3);
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.tier-card--premium {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px var(--gold), var(--shadow-lg);
+}
+
+.tier-best-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+}
+
+.tier-header {
+  padding: 1.5rem 1.5rem 0;
+}
+
+.tier-label {
+  display: inline-block;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.tier-label--gold {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.tier-header h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.tier-color-info {
+  margin: 0.4rem 0 0;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+}
+
+.tier-image {
+  margin: 1.25rem 1.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--cream);
+}
+
+.tier-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Premium colour gallery */
+.tier-gallery {
+  margin: 1.25rem 1.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  position: relative;
+  background: var(--cream);
+}
+
+.tier-gallery-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.tier-gallery-img.active {
+  opacity: 1;
+}
+
+.colour-swatches {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.swatch {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.15s;
+  outline: none;
+}
+
+.swatch:hover { transform: scale(1.12); }
+.swatch.active { border-color: var(--navy); box-shadow: 0 0 0 2px white inset; }
+
+.swatch--navy { background: #0a192f; }
+.swatch--red  { background: #722f37; }
+.swatch--grey { background: #5a5a5a; }
+
+.selected-colour-label {
+  margin: 0.4rem 0 0;
+  padding: 0 1.5rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.tier-pricing {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem 0;
+}
+
+.tier-was {
+  color: #ef4444;
+  text-decoration: line-through;
+  font-size: 0.95rem;
+}
+
+.tier-price {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--orange);
+  line-height: 1;
+}
+
+.tier-features {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0 1.5rem;
+  font-size: 0.93rem;
+}
+
+.tier-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  color: var(--text-soft);
+}
+
+.tier-features li:last-child { border-bottom: none; }
+
+.feat-check { color: #22c55e; font-weight: 800; flex-shrink: 0; }
+.feat-x     { color: #9ca3af; font-weight: 800; flex-shrink: 0; }
+
+.feat-neutral span,
+.feat-neutral { color: #9ca3af !important; }
+
+.feat-premium { color: var(--navy) !important; font-weight: 600; }
+.feat-premium .feat-check { color: var(--gold); }
+
+.tier-cta {
+  margin: 1.5rem;
+  width: calc(100% - 3rem);
+}
+
+/* ── CONTACT / FORM SECTION ── */
+.contact-section {
+  background: var(--cream);
+  padding: 6rem 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.28);
+}
+
+.contact-form {
+  max-width: 48rem;
+  margin: 3rem auto 0;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 700;
+  font-size: 0.93rem;
+  color: var(--navy);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.85rem 1rem;
+  border: 2px solid rgba(148, 163, 184, 0.4);
+  border-radius: 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--white);
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--orange);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 7rem;
+}
+
+.form-submit {
+  display: block;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  background: var(--orange);
+  box-shadow: 0 8px 0 var(--orange-dark);
+  color: var(--white);
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.form-submit:hover {
+  box-shadow: 0 4px 0 var(--orange-dark);
+  transform: translateY(4px);
+}
+
+/* ── MOBILE CTA (two buttons) ── */
+.mobile-cta-pair {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.mobile-cta-pair .mobile-cta__button {
+  flex: 1;
+}
+
+.mobile-cta__button--basic {
+  background: var(--navy) !important;
+}
+
+/* ── RESPONSIVE: new sections ── */
+@media (max-width: 720px) {
+  .pricing-tiers { grid-template-columns: 1fr; }
+  .form-row      { grid-template-columns: 1fr; }
+
+  .contact-section,
+  .offer-section {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+}
