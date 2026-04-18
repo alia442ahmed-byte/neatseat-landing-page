@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You - Neat Seat</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .ty-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--cream);
+      padding: 2rem;
+      text-align: center;
+    }
+    .ty-card {
+      max-width: 36rem;
+      background: var(--white);
+      border-radius: 2rem;
+      padding: 3.5rem 2.5rem;
+      box-shadow: var(--shadow-lg);
+    }
+    .ty-icon {
+      font-size: 4rem;
+      margin-bottom: 1.25rem;
+    }
+    .ty-card h1 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 800;
+      color: var(--navy);
+      margin: 0 0 1rem;
+    }
+    .ty-card p {
+      color: var(--text-soft);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin: 0 0 2rem;
+    }
+    .ty-back {
+      display: inline-block;
+      padding: 0.9rem 2rem;
+      border-radius: 0.75rem;
+      background: var(--orange);
+      box-shadow: 0 6px 0 var(--orange-dark);
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+    .ty-back:hover {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0 var(--orange-dark);
+    }
+  </style>
+</head>
+<body>
+  <div class="ty-page">
+    <div class="ty-card">
+      <div class="ty-icon">✅</div>
+      <h1>Message Received!</h1>
+      <p>
+        Thanks for reaching out. We'll get back to you as soon as possible.
+        In the meantime, feel free to check out our Instagram
+        <a href="https://www.instagram.com/neatseat.ja/" target="_blank" rel="noopener" style="color: var(--orange); font-weight: 700;">@neatseat.ja</a>.
+      </p>
+      <a href="index.html" class="ty-back">Back to Neat Seat</a>
+    </div>
+  </div>
+</body>
+</html>
