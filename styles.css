@@ -997,18 +997,6 @@ body.offer-expired span.post-deadline-element {
   animation: pulse-urgent 2s infinite alternate;
 }
 
-/* ── MOTHER'S DAY BANNER ── */
-.mothers-day-banner {
-  background: linear-gradient(90deg, #b5006e, #d63384, #b5006e);
-  color: #fff;
-  text-align: center;
-  padding: 0.75rem 1rem;
-  font-size: 0.95rem;
-  letter-spacing: 0.03em;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
 
 /* ── SOCIAL PROOF ── */
 .social-proof-badge {
